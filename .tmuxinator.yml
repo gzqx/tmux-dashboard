@@ -1,0 +1,13 @@
+# ./.tmuxinator.yml
+
+name: dashboard
+root: ~/
+
+windows:
+  - dashboard:
+      layout: 2280,236x58,0,0{71x58,0,0,0,77x58,72,0,1,86x58,150,0[86x26,150,0,2,86x31,150,27,3]}
+      panes:
+        - vim +VimwikiIndex
+        - taskwarrior-tui
+        - watch -n 30 journalctl -xf #30 second refresh rate for less distraction
+        - htop -d 100 #maximum of htop is 10 second
