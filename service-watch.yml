@@ -1,0 +1,7 @@
+name: service-watch
+root: ~/
+
+windows:
+  - jellyfin:
+      panes:
+        - systemctl status jellyfin

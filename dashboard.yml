@@ -1,4 +1,3 @@
-# ./.tmuxinator.yml
 
 name: dashboard
 root: ~/
@@ -9,5 +8,5 @@ windows:
       panes:
         - vim +VimwikiIndex
         - taskwarrior-tui
-        - watch -n 30 journalctl -xf #30 second refresh rate for less distraction
+        - watch -n 30 journalctl -xf
         - htop -d 100 #maximum of htop is 10 second
